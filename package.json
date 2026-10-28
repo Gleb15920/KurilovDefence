@@ -1,0 +1,38 @@
+{
+  "name": "kurilov-defence",
+  "displayName": "KurilovDefence",
+  "description": "A simple C++ function memory-training extension for VS Code.",
+  "version": "0.1.0",
+  "publisher": "kurilov-defence",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./out/extension.js",
+  "activationEvents": [
+    "onCommand:kurilov-defence.startTraining"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "kurilov-defence.startTraining",
+        "title": "KurilovDefence: Start Recall Training"
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "vscode:prepublish": "npm run compile",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.7",
+    "@types/vscode": "^1.140.0",
+    "@vscode/vsce": "^4.1.0",
+    "typescript": "^5.7.3"
+  }
+}
